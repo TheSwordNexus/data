@@ -21,6 +21,18 @@
 
 <body>
     <canvas width="500" height="500" id="box"></canvas>
+    <script>
+        var oBox = document.querySelector('#box');
+        var btn = oBox.getContext('2d');
+
+        for (var i = 0; i < 60; i++) {
+            btn.beginPath();
+            btn.moveTo(250, 250);
+            btn.arc(250, 250, 200, 0, Math.PI * (i + 1) * 6 / 180);
+            btn.closePath();
+            btn.stroke();
+        }
+    </script>
 </body>
 
 </html>
