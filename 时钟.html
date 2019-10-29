@@ -32,6 +32,47 @@
             btn.closePath();
             btn.stroke();
         }
+        btn.fillStyle = 'gold';
+        btn.beginPath();
+        btn.moveTo(250, 250);
+        btn.arc(250, 250, 200 * 0.95, 0, Math.PI * 2);
+        btn.closePath();
+        btn.fill();
+
+        btn.lineWidth = 5;
+        btn.beginPath();
+        btn.moveTo(250, 250);
+        // 3点
+        var h = Math.PI * (30 * hh - 90 + mm / 2) / 180;
+        btn.arc(250, 250, 200 * 0.6, h, h);
+        btn.closePath();
+        btn.stroke();
+
+        //分针 
+        btn.lineWidth = 3;
+        btn.beginPath();
+        btn.moveTo(250, 250);
+        var m = Math.PI * (6 * mm - 90) / 180;
+        btn.arc(250, 250, 200 * 0.7, m, m);
+        btn.closePath();
+        btn.stroke();
+        //秒针
+
+
+        btn.lineWidth = 1;
+        btn.strokeStyle = 'black';
+        btn.beginPath();
+        btn.moveTo(250, 250);
+        var s = Math.PI * (6 * ss - 90) / 180;
+        btn.arc(250, 250, 200 * 0.85, s, s);
+        btn.closePath();
+        btn.stroke();
+
+
+        }
+        time();
+
+        var timer = setInterval(time, 1000);
     </script>
 </body>
 
